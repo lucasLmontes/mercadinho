@@ -1,20 +1,41 @@
 header {
-    width: 100%;
-    background-color: rgb(179, 95, 40);
-    margin: 0;
-    padding-block: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-header a {
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(202, 108, 45);
-    text-decoration: none;
-    color: white;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-header a:hover {
-    color: rgb(255, 193, 152);
-    background-color: rgb(167, 88, 35);
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+nav a {
+  margin-left: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #e8f5e9;
+  color: #2e7d32;
 }
