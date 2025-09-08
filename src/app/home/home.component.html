@@ -2,15 +2,33 @@
   <h1>Bem-vindo ao Mercadinho</h1>
   <p>Encontre os melhores produtos com qualidade e preço justo.</p>
 
-  <div class="produtos-preview">
-    <div class="produto-card" [routerLink]="['/produtos', 'frutas']">
-      🍎 Frutas Frescas
+  <div class="section-card">
+    <h2>Mercado</h2>
+    <div class="produtos-preview">
+      <div class="produto-card" [routerLink]="['/produtos', 'frutas']">
+        🍎 Frutas Frescas
+      </div>
+      <div class="produto-card" [routerLink]="['/produtos', 'carnes']">
+        🥩 Carnes Selecionadas
+      </div>
+      <div class="produto-card" [routerLink]="['/produtos', 'laticinios']">
+        🥛 Laticínios
+      </div>
     </div>
-    <div class="produto-card" [routerLink]="['/produtos', 'carnes']">
-      🥩 Carnes Selecionadas
-    </div>
-    <div class="produto-card" [routerLink]="['/produtos', 'laticinios']">
-      🥛 Laticínios
+  </div>
+
+  <div class="section-card">
+    <h2>Farmácia</h2>
+    <div class="produtos-preview">
+      <div class="produto-card" [routerLink]="['/produtos', 'suplementos']">
+        💪 Suplementos e Vitaminas
+      </div>
+      <div class="produto-card" [routerLink]="['/produtos', 'medicamentos']">
+        💊 Medicamentos
+      </div>
+      <div class="produto-card" [routerLink]="['/produtos', 'cuidado']">
+        💅 Cuidado Pessoal
+      </div>
     </div>
   </div>
 </div>
