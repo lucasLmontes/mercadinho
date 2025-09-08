@@ -1,0 +1,13 @@
+<div id="produtos_container">
+  <h1>Produtos - {{ categoria | titlecase }}</h1>
+
+  <div *ngIf="categoria === 'frutas'">
+    <p>Aqui vão as frutas 🍎🍌🍊</p>
+  </div>
+  <div *ngIf="categoria === 'carnes'">
+    <p>Aqui vão as carnes 🥩🍗</p>
+  </div>
+  <div *ngIf="categoria === 'laticinios'">
+    <p>Aqui vão os laticínios 🥛🧀</p>
+  </div>
+</div>

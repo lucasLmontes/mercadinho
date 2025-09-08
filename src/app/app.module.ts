@@ -8,10 +8,24 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { PromocaoComponent } from './promocao/promocao.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CommonModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    PromocaoComponent,
+    ProdutosComponent,
+  ],
+  imports: [
+    BrowserModule,
+    HomeComponent,
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
