@@ -1,22 +1,18 @@
-<div id="produtos_container">
-  <h1>Produtos - {{ categoria | titlecase }}</h1>
+<div class="produtos-container">
+  <h1>{{ categoria | titlecase }}</h1>
 
-  <div *ngIf="categoria === 'frutas'">
-    <p>Aqui vão as frutas 🍎🍌🍊</p>
+  <div *ngIf="produtos.length > 0; else semProdutos">
+    <div class="lista-produtos">
+      <div class="produto" *ngFor="let p of produtos">
+        <img [src]="p.imagem" [alt]="p.nome" />
+        <h3>{{ p.nome }}</h3>
+        <p>{{ p.descricao }}</p>
+        <span class="preco">{{ p.preco }}</span>
+      </div>
+    </div>
   </div>
-  <div *ngIf="categoria === 'carnes'">
-    <p>Aqui vão as carnes 🥩🍗</p>
-  </div>
-  <div *ngIf="categoria === 'laticinios'">
-    <p>Aqui vão os laticínios 🥛🧀</p>
-  </div>
-  <div *ngIf="categoria === 'suplementos'">
-    <p>Aqui vão os suplementos e vitaminas 💪⚡</p>
-  </div>
-  <div *ngIf="categoria === 'medicamentos'">
-    <p>Aqui vão os medicamentos 💊💉</p>
-  </div>
-  <div *ngIf="categoria === 'cuidado'">
-    <p>Aqui vão os itens de cuidado pessoal 🧖‍♀️💅✨</p>
-  </div>
+
+  <ng-template #semProdutos>
+    <p>Nenhum produto cadastrado ainda para esta categoria.</p>
+  </ng-template>
 </div>
